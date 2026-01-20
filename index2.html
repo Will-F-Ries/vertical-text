@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vertical Label</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      height: 100%;
+      width: 100%;
+      background-color: #ddede7;
+      /*border: 2px solid #63c08f;*/
+      box-sizing: border-box;
+      display: flex;
+      align-items: flex-end;   /* bottom align */
+      justify-content: center;
+    }
+
+    .content {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      display: flex;
+      align-items: center;
+      gap: 10px; /* space between icon and text */
+      padding: 16px 12px;
+      white-space: nowrap;
+    }
+
+    .icon {
+      width: 50px;   /* adjust as needed */
+      height: auto;
+    }
+
+    .text {
+      font-family: "Avenir Next","Avenir",Helvetica,Arial,sans-serif;
+      font-size: 30px;
+      color: #2764ae;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <img src="Cloud_rian.png" alt="" class="icon">
+      <div class="text">
+        <strong>Climate</strong> — Adapting to Change
+      </div>
+    </div>
+  </div>
+</body>
+</html>
