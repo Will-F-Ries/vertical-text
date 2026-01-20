@@ -16,25 +16,39 @@
       border: 2px solid #63c08f;
       box-sizing: border-box;
       display: flex;
-      align-items: flex-end;   /* bottom alignment */
-      justify-content: center; /* horizontal centering */
+      align-items: flex-end;   /* bottom align */
+      justify-content: center;
+    }
+
+    .content {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      display: flex;
+      align-items: center;
+      gap: 10px; /* space between icon and text */
+      padding: 16px 12px;
+      white-space: nowrap;
+    }
+
+    .icon {
+      width: 28px;   /* adjust as needed */
+      height: auto;
     }
 
     .text {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
       font-family: "Avenir Next","Avenir",Helvetica,Arial,sans-serif;
       font-size: 30px;
       color: #2764ae;
-      padding: 16px 12px;
-      white-space: nowrap;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="text">
-      <strong>Introduction</strong> — Embracing Nexus Thinking
+    <div class="content">
+      <img src="technology-and-cases.png" alt="" class="icon">
+      <div class="text">
+        <strong>Introduction</strong> — Embracing Nexus Thinking
+      </div>
     </div>
   </div>
 </body>
