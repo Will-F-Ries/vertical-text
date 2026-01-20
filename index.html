@@ -13,10 +13,9 @@
       height: 100%;
       width: 100%;
       background-color: #ddede7;
-      /*border: 2px solid #63c08f;*/
       box-sizing: border-box;
       display: flex;
-      align-items: flex-end;   /* bottom align */
+      align-items: flex-end;
       justify-content: center;
     }
 
@@ -25,13 +24,13 @@
       transform: rotate(180deg);
       display: flex;
       align-items: center;
-      gap: 10px; /* space between icon and text */
+      gap: 10px;
       padding: 16px 12px;
       white-space: nowrap;
     }
 
     .icon {
-      width: 50px;   /* adjust as needed */
+      width: 28px;
       height: auto;
     }
 
@@ -45,11 +44,23 @@
 <body>
   <div class="container">
     <div class="content">
-      <img src="technology-and-cases.png" alt="" class="icon">
-      <div class="text">
-        <strong>Introduction</strong> — Embracing Nexus Thinking
-      </div>
+      <img id="icon" class="icon" alt="">
+      <div class="text" id="labelText"></div>
     </div>
   </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const text =
+      params.get("text") ||
+      "<strong>Introduction</strong> — Embracing Nexus Thinking";
+
+    const icon =
+      params.get("icon") || "technology-and-cases.png";
+
+    document.getElementById("labelText").innerHTML = text;
+    document.getElementById("icon").src = icon;
+  </script>
 </body>
 </html>
